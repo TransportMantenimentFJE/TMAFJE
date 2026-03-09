@@ -2,29 +2,97 @@
 <html lang="ca">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Departament d’Automoció — Escola del Clot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Departament d’Automoció — Jesuïtes El Clot</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/simple.css" id="theme">
+  
   <style>
-    /* Colors i tipografies corporatives */
-    :root { --accent: #6E258F; }
-    .reveal h1, .reveal h2, .reveal h3 { color: var(--accent); text-transform: none; font-weight: bold; }
-    .reveal h1 { font-size: 2.5em; }
-    .reveal h2 { font-size: 1.8em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; margin-bottom: 30px;}
-    .reveal p, .reveal li { font-size: 0.85em; line-height: 1.4; text-align: left; }
+    /* VARIABLES ESTIL FJE */
+    :root { 
+      --fje-red: #E3000F; /* Vermell Jesuïtes */
+      --fje-dark: #333333; /* Gris fosc pel text */
+      --fje-light: #F5F5F5; /* Gris clar per fons secundaris */
+    }
+
+    /* TIPOGRAFIA CORPORATIVA */
+    .reveal {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--fje-dark);
+    }
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 { 
+      font-family: 'Montserrat', sans-serif;
+      color: var(--fje-dark);
+      text-transform: none; 
+      font-weight: 700; 
+    }
+    .reveal h1 { font-size: 2.2em; color: var(--fje-red); }
+    .reveal h2 { 
+      font-size: 1.6em; 
+      color: var(--fje-red);
+      border-bottom: 4px solid var(--fje-red); 
+      padding-bottom: 5px; 
+      display: inline-block; 
+      margin-bottom: 30px;
+    }
+    .reveal h3 { font-size: 1.1em; margin-top: 20px; text-transform: uppercase; color: var(--fje-dark); }
+    .reveal p, .reveal li { font-size: 0.85em; line-height: 1.5; text-align: left; }
     
-    /* Disseny a dues columnes */
-    .col-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-    .col { flex: 1; }
-    .col-img img { border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); max-height: 450px; object-fit: cover; width: 100%; }
+    /* ESTRUCTURA RESPONSIVE (S'adapta a mòbils i tauletes) */
+    .col-container { 
+      display: flex; 
+      flex-wrap: wrap; /* Clau per fer-ho responsive */
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 30px; 
+      text-align: left;
+    }
+    .col { 
+      flex: 1 1 300px; /* Min width de 300px abans de saltar de línia */
+      min-width: 300px;
+    }
+    .col-img img { 
+      border-radius: 4px; /* Vores més rectes, estil web corporativa */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      max-height: 400px; 
+      object-fit: cover; 
+      width: 100%; 
+    }
     
-    /* Botons */
-    .cta { display: inline-block; margin: 0.6rem 0.4rem; padding: 0.8rem 1.2rem; background: var(--accent); color: #fff !important; border-radius: 6px; text-decoration: none; font-size: 0.7em; font-weight: bold; transition: background 0.3s; }
-    .cta:hover { background: #501b68; }
+    /* BOTONS ESTIL FJE */
+    .cta { 
+      display: inline-block; 
+      margin: 0.6rem 0.4rem; 
+      padding: 1rem 1.5rem; 
+      background: var(--fje-red); 
+      color: #fff !important; 
+      border-radius: 0px; /* Els botons de FJE solen ser quadrats o poc arrodonits */
+      text-decoration: none; 
+      font-size: 0.75em; 
+      font-weight: 600; 
+      text-transform: uppercase;
+      transition: background 0.3s, transform 0.2s; 
+    }
+    .cta:hover { 
+      background: #b3000c; /* Vermell més fosc al passar el ratolí */
+      transform: translateY(-2px);
+    }
     .links { margin-top: 1.5rem; text-align: center; }
+
+    /* FONS DESTACATS */
+    .box-info {
+      background: var(--fje-light);
+      padding: 25px;
+      border-left: 5px solid var(--fje-red);
+      border-radius: 0 8px 8px 0;
+    }
   </style>
 </head>
 <body>
@@ -32,9 +100,9 @@
   <div class="slides">
 
     <section>
-      <img src="https://picsum.photos/id/1071/400/200" alt="Logo automoció" style="border-radius: 10px; margin-bottom: 20px;">
+      <img src="https://picsum.photos/id/1071/400/200" alt="Logo automoció" style="border-radius: 4px; margin-bottom: 20px;">
       <h1>Departament d’Automoció</h1>
-      <h3>Escola del Clot</h3>
+      <h3>Jesuïtes El Clot</h3>
       <p class="links">
         <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Roba de taller — EMV/AUTO</a>
         <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
@@ -42,7 +110,7 @@
     </section>
 
     <section>
-      <h2>EMV — CFGM Electromecànica</h2>
+      <h2>EMV — Electromecànica</h2>
       <div class="col-container">
         <div class="col">
           <h3>Objectius professionals</h3>
@@ -66,15 +134,17 @@
     <section>
       <h2>EMV — Dades del cicle</h2>
       <div class="col-container">
-        <div class="col">
+        <div class="col box-info">
           <ul>
             <li><strong>Títol</strong>: Tècnic/a en Electromecànica de Vehicles</li>
             <li><strong>Durada</strong>: 2000 h lectives</li>
             <li><strong>Horari</strong>: 2 cursos de matí (dl–dv, 8:00–14:00)</li>
             <li><strong>FCT</strong>: 516 h en empreses del sector</li>
           </ul>
-          <h3>Mòduls</h3>
-          <p style="font-size:.8em; color: #555;">0260 Mecanització · 0452 Motors · 0453 Aux. motor · 0454 Fluids/Suspensió/Direcció · 0455 Transmissió/Frenada · 0456 Càrrega/Arrencada · 0457 Circuits auxiliars · 0458 Seguretat/Confort · 0156 Anglès · 1664 Digitalització · 1708 Sostenibilitat · 1709–1710 Itinerari ocupabilitat I/II · 1713 Projecte · Optatiu</p>
+        </div>
+        <div class="col">
+          <h3>Mòduls principals</h3>
+          <p style="font-size:.85em; color: #555; line-height: 1.6;">0260 Mecanització · 0452 Motors · 0453 Aux. motor · 0454 Fluids/Suspensió/Direcció · 0455 Transmissió/Frenada · 0456 Càrrega/Arrencada · 0457 Circuits auxiliars · 0458 Seguretat/Confort · 0156 Anglès · 1664 Digitalització · 1708 Sostenibilitat · 1709–1710 Itinerari ocupabilitat I/II · 1713 Projecte · Optatiu</p>
         </div>
       </div>
     </section>
@@ -86,7 +156,7 @@
         <li>Es passa llista cada hora; avís a famílies per SMS.</li>
       </ul>
       <div class="col-container" style="margin-top: 20px;">
-        <div class="col">
+        <div class="col box-info">
           <h3>Material de taller</h3>
           <ul>
             <li>Roba de taller de l’escola</li>
@@ -95,7 +165,7 @@
             <li>Cost aproximat: <em>Cal actualitzar preus</em></li>
           </ul>
         </div>
-        <div class="col links" style="margin-top: 0;">
+        <div class="col links">
           <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Comprar roba de taller EMV</a>
         </div>
       </div>
@@ -110,8 +180,8 @@
         <div class="col">
           <h3>Objectius professionals</h3>
           <ul>
-            <li>Organitzar, programar i supervisar el manteniment (turismes, pesants, motocicletes, maquinària, vaixells…).</li>
-            <li>Proves de laboratori i verificació del funcionament del vehicle.</li>
+            <li>Organitzar, programar i supervisar el manteniment.</li>
+            <li>Proves de laboratori i verificació del funcionament.</li>
             <li>Gestió i comercialització del taller; compravenda.</li>
           </ul>
           <h3>Valors i competències</h3>
@@ -126,12 +196,14 @@
     <section>
       <h2>AUTO — Dades del cicle</h2>
       <div class="col-container">
-        <div class="col">
+        <div class="col box-info">
           <ul>
             <li><strong>Títol</strong>: Tècnic/a Superior en Automoció</li>
             <li><strong>Durada</strong>: 2000 h lectives | <strong>Horari</strong>: 2 cursos de tarda (dl–dv)</li>
             <li><strong>FCT</strong>: Dual general 515 h / Dual intensiva 1100 h</li>
           </ul>
+        </div>
+        <div class="col">
           <h3>Figura de l’aprenent (Dual)</h3>
           <ul>
             <li>Model inspirat en FP d’Alemanya/Àustria/Suïssa, adaptat.</li>
@@ -147,9 +219,9 @@
         <div class="col">
           <h3>Objectius</h3>
           <ul>
-            <li>Manteniment programat i correctiu (motors, cèl·lula, hidràulics, pneumàtics, elèctrics) en línia/hangar.</li>
+            <li>Manteniment programat i correctiu en línia/hangar.</li>
             <li>Manteniment de sistemes d’aviònica en línia.</li>
-            <li>Fabricació/assemblatge de components segons normativa.</li>
+            <li>Fabricació/assemblatge segons normativa.</li>
           </ul>
           <h3>Dades bàsiques</h3>
           <ul>
@@ -169,11 +241,11 @@
         <div class="col">
           <ul>
             <li><strong>Opció A</strong> — Centre EASA 147: est. B1.1/B1.3/B2 (~2500 h), pràctiques 400 h, 2 anys d’experiència a EASA 145.</li>
-            <li><strong>Opció B</strong> — FP + exàmens SENASA: 2000 h CFGS/CFGM (segons itinerari), 80% assistència, 380 h FCT, 3 anys a EASA 145.</li>
+            <li><strong>Opció B</strong> — FP + exàmens SENASA: 2000 h CFGS/CFGM, 80% assistència, 380 h FCT, 3 anys a EASA 145.</li>
           </ul>
-          <p class="links">
-            <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
-          </p>
+        </div>
+        <div class="col links">
+          <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
         </div>
       </div>
     </section>
@@ -186,11 +258,11 @@
         </div>
         <div class="col">
           <ul>
-            <li><strong>Talles:</strong> si dubtes, tria la més gran (EPI a sota pot afegir volum).</li>
+            <li><strong>Talles:</strong> tria la més gran (EPI a sota afegeix volum).</li>
             <li><strong>Botes:</strong> sola antilliscant i puntera reforçada.</li>
             <li><strong>Espurnes/soldadura:</strong> evita teixits sintètics.</li>
-            <li><strong>Guants i ulleres:</strong> millor tenir-ne dues unitats d’ús habitual.</li>
-            <li><strong>Marcatge:</strong> posa-hi el nom per evitar pèrdues a vestidors.</li>
+            <li><strong>Guants/ulleres:</strong> millor tenir-ne dues unitats.</li>
+            <li><strong>Marcatge:</strong> posa-hi el nom per evitar pèrdues.</li>
           </ul>
         </div>
       </div>
@@ -198,12 +270,11 @@
 
     <section>
       <h2>Contacte</h2>
-      <div style="background: #f4f4f4; padding: 30px; border-radius: 12px; margin-top: 20px;">
-        <p><strong>Adreça:</strong> [Carrer de l'escola]</p>
-        <p><strong>Telèfon:</strong> [Telèfon]</p>
-        <p><strong>Correu:</strong> [Correu electrònic]</p>
-        <p><strong>Web:</strong> [Web de l'escola]</p>
-        <p style="font-size: 0.8em; color: #888; margin-top: 20px;">* Actualitza aquestes dades quan ho tinguis tot confirmat.</p>
+      <div class="box-info" style="border-left: none; border-top: 5px solid var(--fje-red); text-align: center; border-radius: 8px;">
+        <p><strong>📍 Adreça:</strong> València 680, 08027 Barcelona</p>
+        <p><strong>📞 Telèfon:</strong> 93 351 60 11</p>
+        <p><strong>✉️ Correu:</strong> info.clot@fje.edu</p>
+        <p><strong>🌐 Web:</strong> <a href="https://www.fje.edu/ca/jesuites-clot" target="_blank" style="color: var(--fje-red); text-decoration: none; font-weight: bold;">fje.edu/ca/jesuites-clot</a></p>
       </div>
     </section>
 
@@ -215,7 +286,13 @@
   Reveal.initialize({
     hash: true,
     slideNumber: true,
-    transition: 'slide'
+    transition: 'slide',
+    // Ajustos per fer la presentació més fluïda als dispositius
+    width: 1080,
+    height: 720,
+    margin: 0.08,
+    minScale: 0.2,
+    maxScale: 2.0
   });
 </script>
 </body>

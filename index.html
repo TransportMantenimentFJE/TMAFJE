@@ -4,24 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Departament d’Automoció — Escola del Clot</title>
-  <!-- Reveal.js via CDN -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/simple.css" id="theme">
   <style>
-    :root{--accent:#6E258F}
-    .reveal h1,.reveal h2{color:var(--accent)}
-    .cta{display:inline-block;margin:.6rem .4rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:.4rem;text-decoration:none}
-    .links{margin-top:1rem}
+    /* Colors i tipografies corporatives */
+    :root { --accent: #6E258F; }
+    .reveal h1, .reveal h2, .reveal h3 { color: var(--accent); text-transform: none; font-weight: bold; }
+    .reveal h1 { font-size: 2.5em; }
+    .reveal h2 { font-size: 1.8em; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; margin-bottom: 30px;}
+    .reveal p, .reveal li { font-size: 0.85em; line-height: 1.4; text-align: left; }
+    
+    /* Disseny a dues columnes */
+    .col-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .col { flex: 1; }
+    .col-img img { border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); max-height: 450px; object-fit: cover; width: 100%; }
+    
+    /* Botons */
+    .cta { display: inline-block; margin: 0.6rem 0.4rem; padding: 0.8rem 1.2rem; background: var(--accent); color: #fff !important; border-radius: 6px; text-decoration: none; font-size: 0.7em; font-weight: bold; transition: background 0.3s; }
+    .cta:hover { background: #501b68; }
+    .links { margin-top: 1.5rem; text-align: center; }
   </style>
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
 
-    <!-- Portada -->
     <section>
+      <img src="https://picsum.photos/id/1071/400/200" alt="Logo automoció" style="border-radius: 10px; margin-bottom: 20px;">
       <h1>Departament d’Automoció</h1>
       <h3>Escola del Clot</h3>
       <p class="links">
@@ -30,32 +41,42 @@
       </p>
     </section>
 
-    <!-- EMV -->
     <section>
-      <h2>EMV — CFGM Electromecànica de Vehicles</h2>
-      <h3>Objectius professionals</h3>
-      <ul>
-        <li>Manteniment i reparació de motors tèrmics i sistemes auxiliars.</li>
-        <li>Tren de rodatge: frens, transmissió, direcció i suspensió.</li>
-        <li>Sistemes elèctrics: modificacions i noves instal·lacions.</li>
-        <li>Administració, gestió i comercialització en petit taller.</li>
-      </ul>
-      <h3>Objectius personals</h3>
-      <ul>
-        <li>Autonomia, treball en equip, respecte i excel·lència professional.</li>
-      </ul>
+      <h2>EMV — CFGM Electromecànica</h2>
+      <div class="col-container">
+        <div class="col">
+          <h3>Objectius professionals</h3>
+          <ul>
+            <li>Manteniment i reparació de motors tèrmics i sistemes auxiliars.</li>
+            <li>Tren de rodatge: frens, transmissió, direcció i suspensió.</li>
+            <li>Sistemes elèctrics: modificacions i noves instal·lacions.</li>
+            <li>Administració, gestió i comercialització en petit taller.</li>
+          </ul>
+          <h3>Objectius personals</h3>
+          <ul>
+            <li>Autonomia, treball en equip, respecte i excel·lència professional.</li>
+          </ul>
+        </div>
+        <div class="col col-img">
+          <img src="https://picsum.photos/id/111/600/500" alt="Taller EMV">
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>EMV — Dades del cicle</h2>
-      <ul>
-        <li><strong>Títol</strong>: Tècnic/a en Electromecànica de Vehicles</li>
-        <li><strong>Durada</strong>: 2000 h lectives</li>
-        <li><strong>Horari</strong>: 2 cursos de matí (dl–dv, 8:00–14:00)</li>
-        <li><strong>FCT</strong>: 516 h en empreses del sector</li>
-      </ul>
-      <h3>Mòduls</h3>
-      <p style="font-size:.9em">0260 Mecanització · 0452 Motors · 0453 Aux. motor · 0454 Fluids/Suspensió/Direcció · 0455 Transmissió/Frenada · 0456 Càrrega/Arrencada · 0457 Circuits auxiliars · 0458 Seguretat/Confort · 0156 Anglès · 1664 Digitalització · 1708 Sostenibilitat · 1709–1710 Itinerari ocupabilitat I/II · 1713 Projecte · Optatiu</p>
+      <div class="col-container">
+        <div class="col">
+          <ul>
+            <li><strong>Títol</strong>: Tècnic/a en Electromecànica de Vehicles</li>
+            <li><strong>Durada</strong>: 2000 h lectives</li>
+            <li><strong>Horari</strong>: 2 cursos de matí (dl–dv, 8:00–14:00)</li>
+            <li><strong>FCT</strong>: 516 h en empreses del sector</li>
+          </ul>
+          <h3>Mòduls</h3>
+          <p style="font-size:.8em; color: #555;">0260 Mecanització · 0452 Motors · 0453 Aux. motor · 0454 Fluids/Suspensió/Direcció · 0455 Transmissió/Frenada · 0456 Càrrega/Arrencada · 0457 Circuits auxiliars · 0458 Seguretat/Confort · 0156 Anglès · 1664 Digitalització · 1708 Sostenibilitat · 1709–1710 Itinerari ocupabilitat I/II · 1713 Projecte · Optatiu</p>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -64,112 +85,126 @@
         <li>Assistència mínima del 80% per mòdul; amb absències &gt;20%, <em>No avaluat</em>.</li>
         <li>Es passa llista cada hora; avís a famílies per SMS.</li>
       </ul>
-      <h3>Material de taller</h3>
-      <ul>
-        <li>Roba de taller de l’escola</li>
-        <li>Equip d’eines: carraca, tornavisos, alicates</li>
-        <li>Multímetre, soldador i estany</li>
-        <li>Cost aproximat: <em>Cal actualitzar preus</em></li>
-      </ul>
-      <p class="links">
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Roba de taller — EMV/AUTO</a>
-      </p>
+      <div class="col-container" style="margin-top: 20px;">
+        <div class="col">
+          <h3>Material de taller</h3>
+          <ul>
+            <li>Roba de taller de l’escola</li>
+            <li>Equip d’eines: carraca, tornavisos, alicates</li>
+            <li>Multímetre, soldador i estany</li>
+            <li>Cost aproximat: <em>Cal actualitzar preus</em></li>
+          </ul>
+        </div>
+        <div class="col links" style="margin-top: 0;">
+          <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Comprar roba de taller EMV</a>
+        </div>
+      </div>
     </section>
 
-    <!-- AUTO -->
     <section>
       <h2>AUTO — CFGS Automoció</h2>
-      <h3>Objectius professionals</h3>
-      <ul>
-        <li>Organitzar, programar i supervisar el manteniment (turismes, pesants, motocicletes, maquinària, vaixells…).</li>
-        <li>Proves de laboratori i verificació del funcionament del vehicle.</li>
-        <li>Gestió i comercialització del taller; compravenda de vehicles.</li>
-      </ul>
-      <h3>Valors i competències</h3>
-      <ul>
-        <li>Autonomia, treball en equip, respecte, professionalitat.</li>
-        <li>Presa de decisions, flexibilitat/adaptació, comunicació.</li>
-      </ul>
+      <div class="col-container">
+        <div class="col col-img">
+          <img src="https://picsum.photos/id/133/600/500" alt="Taller AUTO">
+        </div>
+        <div class="col">
+          <h3>Objectius professionals</h3>
+          <ul>
+            <li>Organitzar, programar i supervisar el manteniment (turismes, pesants, motocicletes, maquinària, vaixells…).</li>
+            <li>Proves de laboratori i verificació del funcionament del vehicle.</li>
+            <li>Gestió i comercialització del taller; compravenda.</li>
+          </ul>
+          <h3>Valors i competències</h3>
+          <ul>
+            <li>Autonomia, treball en equip, respecte, professionalitat.</li>
+            <li>Presa de decisions, flexibilitat i comunicació.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>AUTO — Dades del cicle</h2>
-      <ul>
-        <li><strong>Títol</strong>: Tècnic/a Superior en Automoció</li>
-        <li><strong>Durada</strong>: 2000 h lectives</li>
-        <li><strong>Horari</strong>: 2 cursos de tarda (dl–dv)</li>
-        <li><strong>FCT</strong>: Dual general 515 h / Dual intensiva 1100 h</li>
-      </ul>
-      <h3>Avaluació</h3>
-      <ul>
-        <li>Assistència mínima del 80% per mòdul; &gt;20% d’absències, <em>No avaluat</em>.</li>
-      </ul>
-      <h3>Figura de l’aprenent (Dual)</h3>
-      <ul>
-        <li>Model inspirat en FP d’Alemanya/Àustria/Suïssa, adaptat a Catalunya.</li>
-        <li>Beca salari: 1000–1100 h; gratificació mínima 70% del SMI. Alta inserció.</li>
-      </ul>
-      <h3>Material de taller</h3>
-      <ul>
-        <li>Roba de taller; carraca, tornavisos, alicates; multímetre; soldador i estany.</li>
-      </ul>
-      <p class="links">
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Roba de taller — EMV/AUTO</a>
-      </p>
-    </section>
-
-    <!-- TMA -->
-    <section>
-      <h2>TMA — CFGS Manteniment Aeromecànic</h2>
-      <h3>Objectius</h3>
-      <ul>
-        <li>Manteniment programat i correctiu (motors, cèl·lula, hidràulics, pneumàtics, elèctrics) en línia/hangar.</li>
-        <li>Manteniment de sistemes d’aviònica en línia.</li>
-        <li>Fabricació/assemblatge de components segons normativa aeronàutica.</li>
-      </ul>
-      <h3>Dades del cicle</h3>
-      <ul>
-        <li><strong>Títol</strong>: Tècnic/a Superior en Manteniment Aeromecànic d’Avions (motor de turbina)</li>
-        <li><strong>Durada</strong>: 2957 h (3 cursos) — 1r: 8–14h; 2n/3r: 15–21h</li>
-        <li><strong>FCT</strong>: 782–1100 h</li>
-      </ul>
+      <div class="col-container">
+        <div class="col">
+          <ul>
+            <li><strong>Títol</strong>: Tècnic/a Superior en Automoció</li>
+            <li><strong>Durada</strong>: 2000 h lectives | <strong>Horari</strong>: 2 cursos de tarda (dl–dv)</li>
+            <li><strong>FCT</strong>: Dual general 515 h / Dual intensiva 1100 h</li>
+          </ul>
+          <h3>Figura de l’aprenent (Dual)</h3>
+          <ul>
+            <li>Model inspirat en FP d’Alemanya/Àustria/Suïssa, adaptat.</li>
+            <li>Beca salari: 1000–1100 h; gratificació mínima 70% del SMI. Alta inserció.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>TMA — Mòduls i itineraris</h2>
-      <h3>Mòduls (síntesi)</h3>
-      <p style="font-size:.9em">Electricitat/Electrònica; Tècniques digitals; Materials/Eines; Pràctiques mecàniques i d’aviònica; Aerodinàmica bàsica; Factors humans; Legislació; Sistemes de cèl·lula i comandaments; Hidràulics/Pneumàtics/Tren; Sistemes d’oxigen/aigües/protecció; Motors de turbines; Hèlixs; Anglès; Digitalització; Sostenibilitat; Itineraris d’ocupabilitat; Projecte; Optatiu.</p>
-      <h3>Itineraris de llicència</h3>
-      <ul>
-        <li><strong>Opció A</strong> — Centre EASA 147: est. B1.1/B1.3/B2 (~2500 h), pràctiques 400 h, 2 anys d’experiència a EASA 145.</li>
-        <li><strong>Opció B</strong> — FP + exàmens SENASA: 2000 h CFGS/CFGM (segons itinerari), 80% assistència, 380 h FCT, 3 anys a EASA 145.</li>
-      </ul>
-      <p class="links">
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
-      </p>
+      <h2>TMA — Manteniment Aeromecànic</h2>
+      <div class="col-container">
+        <div class="col">
+          <h3>Objectius</h3>
+          <ul>
+            <li>Manteniment programat i correctiu (motors, cèl·lula, hidràulics, pneumàtics, elèctrics) en línia/hangar.</li>
+            <li>Manteniment de sistemes d’aviònica en línia.</li>
+            <li>Fabricació/assemblatge de components segons normativa.</li>
+          </ul>
+          <h3>Dades bàsiques</h3>
+          <ul>
+            <li><strong>Durada</strong>: 2957 h (3 cursos) — 1r: matí; 2n/3r: tarda</li>
+            <li><strong>FCT</strong>: 782–1100 h</li>
+          </ul>
+        </div>
+        <div class="col col-img">
+          <img src="https://picsum.photos/id/806/600/500" alt="Aeromecànica">
+        </div>
+      </div>
     </section>
 
-    <!-- Consells roba -->
     <section>
-      <h2>Consells per comprar la roba de taller</h2>
-      <ul>
-        <li>Talles: si dubtes, tria la més gran (EPI a sota pot afegir volum).</li>
-        <li>Botes: sola antilliscant i puntera reforçada.</li>
-        <li>Per espurnes/soldadura: evita teixits sintètics.</li>
-        <li>Guants i ulleres: millor tenir-ne dues unitats d’ús habitual.</li>
-        <li>Marcatge de nom per evitar pèrdues a vestidors.</li>
-      </ul>
-      <p class="links">
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">EMV/AUTO — Roba de taller</a>
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">TMA — Roba de taller</a>
-      </p>
+      <h2>TMA — Itineraris i llicència</h2>
+      <div class="col-container">
+        <div class="col">
+          <ul>
+            <li><strong>Opció A</strong> — Centre EASA 147: est. B1.1/B1.3/B2 (~2500 h), pràctiques 400 h, 2 anys d’experiència a EASA 145.</li>
+            <li><strong>Opció B</strong> — FP + exàmens SENASA: 2000 h CFGS/CFGM (segons itinerari), 80% assistència, 380 h FCT, 3 anys a EASA 145.</li>
+          </ul>
+          <p class="links">
+            <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Contacte placeholders -->
+    <section>
+      <h2>Consells per a la roba de taller</h2>
+      <div class="col-container">
+        <div class="col col-img">
+          <img src="https://picsum.photos/id/22/600/400" alt="EPIs i roba">
+        </div>
+        <div class="col">
+          <ul>
+            <li><strong>Talles:</strong> si dubtes, tria la més gran (EPI a sota pot afegir volum).</li>
+            <li><strong>Botes:</strong> sola antilliscant i puntera reforçada.</li>
+            <li><strong>Espurnes/soldadura:</strong> evita teixits sintètics.</li>
+            <li><strong>Guants i ulleres:</strong> millor tenir-ne dues unitats d’ús habitual.</li>
+            <li><strong>Marcatge:</strong> posa-hi el nom per evitar pèrdues a vestidors.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2>Contacte</h2>
-      <p>[Adreça] · [Telèfon] · [Correu] · [Web]</p>
-      <p>Actualitza aquestes dades quan ho tinguis tot confirmat.</p>
+      <div style="background: #f4f4f4; padding: 30px; border-radius: 12px; margin-top: 20px;">
+        <p><strong>📍 Adreça:</strong> [Carrer de l'escola]</p>
+        <p><strong>📞 Telèfon:</strong> [Telèfon]</p>
+        <p><strong>✉️ Correu:</strong> [Correu electrònic]</p>
+        <p><strong>🌐 Web:</strong> [Web de l'escola]</p>
+        <p style="font-size: 0.8em; color: #888; margin-top: 20px;">* Actualitza aquestes dades quan ho tinguis tot confirmat.</p>
+      </div>
     </section>
 
   </div>

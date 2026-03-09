@@ -14,107 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/simple.css" id="theme">
   
-  <style>
-    /* VARIABLES ESTIL FJE */
-    :root { 
-      --fje-red: #E3000F; 
-      --fje-dark: #333333; 
-      --fje-light: #F5F5F5; 
-    }
-
-    /* SOLUCIÓ PER PERMETRE L'SCROLL VERTICAL */
-    .reveal .slides section {
-      height: 100% !important;
-      overflow-y: auto !important;
-      overflow-x: hidden;
-      box-sizing: border-box;
-      padding: 10px 5px 40px 5px !important; /* Marge inferior perquè no quedi tallat a baix */
-    }
-    
-    /* Disseny bonic per a la barra d'scroll corporativa */
-    .reveal .slides section::-webkit-scrollbar {
-      width: 8px;
-    }
-    .reveal .slides section::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .reveal .slides section::-webkit-scrollbar-thumb {
-      background: var(--fje-red);
-      border-radius: 10px;
-    }
-
-    /* TIPOGRAFIA CORPORATIVA */
-    .reveal {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--fje-dark);
-    }
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 { 
-      font-family: 'Montserrat', sans-serif;
-      color: var(--fje-dark);
-      text-transform: none; 
-      font-weight: 700; 
-    }
-    .reveal h1 { font-size: 2.2em; color: var(--fje-red); margin-top: 20px;}
-    .reveal h2 { 
-      font-size: 1.6em; 
-      color: var(--fje-red);
-      border-bottom: 4px solid var(--fje-red); 
-      padding-bottom: 5px; 
-      display: inline-block; 
-      margin-bottom: 30px;
-    }
-    .reveal h3 { font-size: 1.1em; margin-top: 20px; text-transform: uppercase; color: var(--fje-dark); }
-    .reveal p, .reveal li { font-size: 0.85em; line-height: 1.5; text-align: left; }
-    
-    /* ESTRUCTURA RESPONSIVE */
-    .col-container { 
-      display: flex; 
-      flex-wrap: wrap; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 30px; 
-      text-align: left;
-    }
-    .col { 
-      flex: 1 1 300px; 
-      min-width: 300px;
-    }
-    .col-img img { 
-      border-radius: 4px; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-      max-height: 400px; 
-      object-fit: cover; 
-      width: 100%; 
-    }
-    
-    /* BOTONS ESTIL FJE */
-    .cta { 
-      display: inline-block; 
-      margin: 0.6rem 0.4rem; 
-      padding: 1rem 1.5rem; 
-      background: var(--fje-red); 
-      color: #fff !important; 
-      border-radius: 0px; 
-      text-decoration: none; 
-      font-size: 0.75em; 
-      font-weight: 600; 
-      text-transform: uppercase;
-      transition: background 0.3s, transform 0.2s; 
-    }
-    .cta:hover { 
-      background: #b3000c; 
-      transform: translateY(-2px);
-    }
-    .links { margin-top: 1.5rem; text-align: center; }
-
-    /* FONS DESTACATS */
-    .box-info {
-      background: var(--fje-light);
-      padding: 25px;
-      border-left: 5px solid var(--fje-red);
-      border-radius: 0 8px 8px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="estils.css">
 </head>
 <body>
 <div class="reveal">
@@ -308,7 +208,7 @@
     hash: true,
     slideNumber: true,
     transition: 'slide',
-    center: false, /* AQUÍ HI HA LA CLAU: Evita que talli el text per dalt */
+    center: false,
     width: 1080,
     height: 720,
     margin: 0.08,

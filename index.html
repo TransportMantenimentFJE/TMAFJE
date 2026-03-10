@@ -18,20 +18,56 @@
 </head>
 <body>
 <div class="reveal">
+
+  <div class="logo-global top-left">
+    <img src="img/Logo J_Clot_claimColor.png" alt="Logo Escola">
+  </div>
+  
+  <div class="logo-global bottom-right logo-auto">
+    <img src="img/logo-automocio.png" alt="Logo Automoció">
+  </div>
+  
+  <div class="logo-global bottom-right logo-tma">
+    <img src="img/logo-tma.png" alt="Logo TMA">
+  </div>
+  
   <div class="slides">
 
-    <section>
-      <img src="https://picsum.photos/id/1071/400/200" alt="Logo automoció" style="border-radius: 4px; margin-bottom: 20px;">
-      <h1>Departament d’Automoció</h1>
-      <h3>Jesuïtes El Clot</h3>
-      <p class="links">
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Roba de taller — EMV/AUTO</a>
-        <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
-      </p>
+    <section data-state="portada">
+      <img class="logo-portada" src="img/Logo J_Clot_claimColor.png" alt="Logo automoció">
+      
+      <h1 style="margin-top: 100px; text-align: center;">Departament de Transport i Manteniment de Vehicles</h1>
+      <p class="subtitol-portada">Formació professional orientada a l'ocupabilitat, la tecnologia i els valors.</p>
+      
+      <div class="links" style="text-align: center;">
+        <a class="cta" href="#emv">Anar a EMV</a>
+        <a class="cta" href="#auto">Anar a AUTO</a>
+        <a class="cta" href="#tma">Anar a TMA</a>
+      </div>
+
+      <div class="links" style="margin-top: 2rem; font-size: 0.8em; text-align: center;">
+        
+        <div class="preview-container">
+          <a class="cta" style="background: var(--fje-dark);" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Botiga roba — EMV/AUTO</a>
+          <div class="preview-box">
+            <img src="img/Captura-botiga-auto.jpg" alt="Vista prèvia botiga EMV/AUTO">
+            <p style="font-size: 0.8em; margin: 5px 0; text-align: center; color: #666; line-height: 1;">Fes clic per anar a la botiga</p>
+          </div>
+        </div>
+
+        <div class="preview-container">
+          <a class="cta" style="background: var(--fje-dark);" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Botiga roba — TMA</a>
+          <div class="preview-box">
+            <img src="img/Captura-botiga-tma.jpg" alt="Vista prèvia botiga TMA">
+            <p style="font-size: 0.8em; margin: 5px 0; text-align: center; color: #666; line-height: 1;">Fes clic per anar a la botiga</p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section>
-      <h2>EMV — Electromecànica</h2>
+    <section id="emv" data-state="is-auto">
+      <h2>Electromecànica de vehicles</h2>
       <div class="col-container">
         <div class="col">
           <h3>Objectius professionals</h3>
@@ -47,12 +83,12 @@
           </ul>
         </div>
         <div class="col col-img">
-          <img src="https://picsum.photos/id/111/600/500" alt="Taller EMV">
+          <img src="img/EMV.jpg" alt="Taller EMV">
         </div>
       </div>
     </section>
 
-    <section>
+    <section data-state="is-auto">
       <h2>EMV — Dades del cicle</h2>
       <div class="col-container">
         <div class="col box-info">
@@ -65,38 +101,107 @@
         </div>
         <div class="col">
           <h3>Mòduls principals</h3>
-          <p style="font-size:.85em; color: #555; line-height: 1.6;">0260 Mecanització · 0452 Motors · 0453 Aux. motor · 0454 Fluids/Suspensió/Direcció · 0455 Transmissió/Frenada · 0456 Càrrega/Arrencada · 0457 Circuits auxiliars · 0458 Seguretat/Confort · 0156 Anglès · 1664 Digitalització · 1708 Sostenibilitat · 1709–1710 Itinerari ocupabilitat I/II · 1713 Projecte · Optatiu</p>
+          <ul style="font-size:.85em; color: #555; line-height: 1.6;">
+            <li>0260 Mecanització</li>
+            <li>0452 Motors</li>
+            <li>0453 Sist. Aux. motor</li>
+            <li>0454 Fluids/Suspensió/Direcció</li>
+            <li>0455 Transmissió/Frenada</li>
+            <li>0456 Càrrega/Arrencada</li>
+            <li>0457 Circuits elèctrics auxiliars</li>
+            <li>0458 Seguretat/Confort</li>
+            <li>0156 Anglès</li>
+            <li>1664 Digitalització</li>
+            <li>1708 Sostenibilitat</li>
+            <li>1709–1710 Itinerari ocupabilitat I/II</li>
+            <li>1713 Projecte</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>EMV — Avaluació i material</h2>
-      <ul>
-        <li>Assistència mínima del 80% per mòdul; amb absències &gt;20%, <em>No avaluat</em>.</li>
-        <li>Es passa llista cada hora; avís a famílies per SMS.</li>
-      </ul>
+    <section data-state="is-auto">
+      <h2>EMV — Avaluació</h2>
+      <div class="box-info" style="margin-top: 40px;">
+        <ul>
+          <li><strong>Assistència:</strong> Mínima del 80% per mòdul. Amb absències superiors al 20%, la qualificació serà <em>No avaluat</em>.</li>
+          <li><strong>Control:</strong> Es passa llista cada hora de classe. S'enviarà un avís a les famílies per SMS si cal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section data-state="is-auto">
+      <h2>EMV — Material de taller</h2>
       <div class="col-container" style="margin-top: 20px;">
         <div class="col box-info">
-          <h3>Material de taller</h3>
           <ul>
             <li>Roba de taller de l’escola</li>
             <li>Equip d’eines: carraca, tornavisos, alicates</li>
             <li>Multímetre, soldador i estany</li>
-            <li>Cost aproximat: <em>Cal actualitzar preus</em></li>
+            <li>Cost aproximat: &asymp; 250€</li>
+      <br>
+      <li>Ordinador</li>
           </ul>
         </div>
-        <div class="col links">
-          <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Comprar roba de taller EMV</a>
+        <div class="col links" style="text-align: center;">
+          <div class="preview-container">
+            <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Comprar roba de taller EMV</a>
+            <div class="preview-box">
+              <img src="img/Captura-botiga-auto.jpg" alt="Vista prèvia botiga EMV">
+              <p style="font-size: 0.8em; margin: 5px 0; text-align: center; color: #666; line-height: 1;">Fes clic per anar a la botiga</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section data-state="is-auto">
+      <h2>Especialització: Món de la Competició</h2>
+      <div class="col-container">
+        <div class="col">
+          <p style="font-weight: 600; color: var(--color-clot); font-size: 0.9em; margin-bottom: 15px;">Del taller de l'escola al Pit Lane. Vols formar part d'un equip de carreres?</p>
+          <p>Gràcies a l'aliança amb <strong>RS Grup</strong>, oferim als nostres alumnes una oportunitat única: complementar els estudis oficials amb formació d'alt rendiment en motorsport.</p>
+          
+          <div class="box-info" style="margin-top: 20px;">
+            <h3 style="margin-top: 0; font-size: 0.9em;">Oferta RS Grup: Mecànica de Competició</h3>
+            <ul style="margin-top: 10px;">
+              <li>Prepara't per <strong>treballar als boxes</strong>.</li>
+              <li>Mecànica, telemetria, set-up de suspensions i gestió de cursa.</li>
+              <li><strong>Pràctiques reals</strong> en circuits i equips de competició.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-img" style="text-align: center;">
+          <img src="img/competicio.jpg" alt="Mecànica de competició al Pit Lane">
+          <img src="img/rs-grup.png" alt="Logo RS Grup" style="max-width: 150px; margin-top: 15px; box-shadow: none; border-radius: 0;">
+        </div>
+      </div>
+    </section>
+      
+    <section data-state="is-auto">
+      <h2>EMV — Pràctiques i col·laboracions</h2>
+      <div class="col-container" style="margin-top: 20px;">
+        <div class="col">
+          <ul style="margin-bottom: 20px;">
+            <li>Pràctiques curriculars en centres de treball del sector.</li>
+            <li>Col·laboració amb tallers (visites, estades, seminaris, etc.).</li>
+          </ul>
+          
+          <div style="margin-top: 40px;">
+            <a class="cta" style="background: var(--fje-dark); font-size: 0.7em;" href="#contacte">Finalitzar explicació EMV &#10140;</a>
+          </div>
+        </div>
+        <div class="col col-img">
+          <img src="img/EMV2.jpeg" alt="Pràctiques EMV">
+        </div>
+      </div>
+    </section>
+
+    <section id="auto" data-state="is-auto">
       <h2>AUTO — CFGS Automoció</h2>
       <div class="col-container">
         <div class="col col-img">
-          <img src="https://picsum.photos/id/133/600/500" alt="Taller AUTO">
+          <img src="img/EMV.jpg" alt="Taller AUTO">
         </div>
         <div class="col">
           <h3>Objectius professionals</h3>
@@ -114,7 +219,7 @@
       </div>
     </section>
 
-    <section>
+    <section data-state="is-auto">
       <h2>AUTO — Dades del cicle</h2>
       <div class="col-container">
         <div class="col box-info">
@@ -133,8 +238,85 @@
         </div>
       </div>
     </section>
+      
+    <section data-state="is-auto">
+      <h2>AUTO — Avaluació</h2>
+      <div class="box-info" style="margin-top: 40px;">
+        <ul>
+          <li><strong>Assistència:</strong> Mínima del 80% per mòdul. Amb absències superiors al 20%, la qualificació serà <em>No avaluat</em>.</li>
+          <li><strong>Control:</strong> Es passa llista cada hora de classe.</li>
+        </ul>
+      </div>
+    </section>  
+      
+    <section data-state="is-auto">
+      <h2>AUTO — Material de taller</h2>
+      <div class="col-container" style="margin-top: 20px;">
+        <div class="col box-info">
+          <ul>
+            <li>Roba de taller de l’escola</li>
+            <li>Equip d’eines: carraca, tornavisos, alicates</li>
+            <li>Multímetre, soldador i estany</li>
+            <li>Cost aproximat: &asymp; 250€</li>
+      <br>
+      <li>Ordinador</li>   
+          </ul>
+        </div>
+        <div class="col links" style="text-align: center;">
+          <div class="preview-container">
+            <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-automocio-1612" target="_blank" rel="noopener">Comprar roba de taller AUTO</a>
+            <div class="preview-box">
+              <img src="img/Captura-botiga-auto.jpg" alt="Vista prèvia botiga AUTO">
+              <p style="font-size: 0.8em; margin: 5px 0; text-align: center; color: #666; line-height: 1;">Fes clic per anar a la botiga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
 
-    <section>
+    <section data-state="is-auto">
+      <h2>Especialització: Món de la Competició</h2>
+      <div class="col-container">
+        <div class="col">
+          <p style="font-weight: 600; color: var(--color-clot); font-size: 0.9em; margin-bottom: 15px;">Del taller de l'escola al Pit Lane. Vols formar part d'un equip de carreres?</p>
+          <p>Gràcies a l'aliança amb <strong>RS Grup</strong>, oferim als nostres alumnes una oportunitat única: complementar els estudis oficials amb formació d'alt rendiment en motorsport.</p>
+          
+          <div class="box-info" style="margin-top: 20px;">
+            <h3 style="margin-top: 0; font-size: 0.9em;">Oferta RS Grup: Mecànica de Competició</h3>
+            <ul style="margin-top: 10px;">
+              <li>Prepara't per <strong>treballar als boxes</strong>.</li>
+              <li>Mecànica, telemetria, set-up de suspensions i gestió de cursa.</li>
+              <li><strong>Pràctiques reals</strong> en circuits i equips de competició.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-img" style="text-align: center;">
+          <img src="img/competicio.jpg" alt="Mecànica de competició al Pit Lane">
+          <img src="img/rs-grup.png" alt="Logo RS Grup" style="max-width: 150px; margin-top: 15px; box-shadow: none; border-radius: 0;">
+        </div>
+      </div>
+    </section>
+      
+    <section data-state="is-auto">
+      <h2>AUTO — Pràctiques i col·laboracions</h2>
+      <div class="col-container" style="margin-top: 20px;">
+        <div class="col">
+          <ul style="margin-bottom: 20px;">
+            <li>Pràctiques curriculars en centres de treball del sector.</li>
+            <li>Col·laboració amb tallers (visites, estades, seminaris, etc.).</li>
+          </ul>
+          
+          <div style="margin-top: 40px;">
+            <a class="cta" style="background: var(--fje-dark); font-size: 0.7em;" href="#contacte">Finalitzar explicació AUTO &#10140;</a>
+          </div>
+        </div>
+        <div class="col col-img">
+          <img src="img/EMV2.jpeg" alt="Pràctiques AUTO">
+        </div>
+      </div>
+    </section>  
+
+    <section id="tma" data-state="is-tma">
       <h2>TMA — Manteniment Aeromecànic</h2>
       <div class="col-container">
         <div class="col">
@@ -151,12 +333,28 @@
           </ul>
         </div>
         <div class="col col-img">
-          <img src="https://picsum.photos/id/806/600/500" alt="Aeromecànica">
+          <img src="img/TMA3.jpeg" alt="Aeromecànica">
         </div>
       </div>
     </section>
 
-    <section>
+    <section data-state="is-tma">
+      <h2>TMA — Mòduls (síntesi)</h2>
+      <div class="box-info" style="margin-top: 20px;">
+        <ul style="font-size: 0.85em; line-height: 1.6; padding-left: 20px;">
+          <li>Fonaments d’electricitat i electrònica; tècniques digitals i sistemes d’instruments</li>
+          <li>Materials, equips i eines; pràctiques de manteniment mecànic i d’aviònica</li>
+          <li>Aerodinàmica bàsica; factors humans; legislació aeronàutica</li>
+          <li>Sistemes de cèl·lula i comandaments de vol; hidràulics, pneumàtics i tren d'aterratge</li>
+          <li>Sistemes d’oxigen, aigües i protecció</li>
+          <li>Motors de turbines de gas; hèlixs</li>
+          <li>Anglès professional; itineraris d’ocupabilitat; digitalització i sostenibilitat</li>
+          <li>Projecte intermodular i mòdul optatiu</li>
+        </ul>
+      </div>
+    </section>
+
+    <section data-state="is-tma">
       <h2>TMA — Itineraris i llicència</h2>
       <div class="col-container">
         <div class="col">
@@ -165,37 +363,65 @@
             <li><strong>Opció B</strong> — FP + exàmens SENASA: 2000 h CFGS/CFGM, 80% assistència, 380 h FCT, 3 anys a EASA 145.</li>
           </ul>
         </div>
-        <div class="col links">
-          <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
-        </div>
+        
       </div>
     </section>
 
-    <section>
-      <h2>Consells per a la roba de taller</h2>
+    <section data-state="is-tma">
+      <h2>Material tallers i aules</h2>
       <div class="col-container">
         <div class="col col-img">
-          <img src="https://picsum.photos/id/22/600/400" alt="EPIs i roba">
+          <img src="img/TMA2.jpeg" alt="EPIs i roba">
         </div>
         <div class="col">
           <ul>
             <li><strong>Talles:</strong> tria la més gran (EPI a sota afegeix volum).</li>
             <li><strong>Botes:</strong> sola antilliscant i puntera reforçada.</li>
-            <li><strong>Espurnes/soldadura:</strong> evita teixits sintètics.</li>
-            <li><strong>Guants/ulleres:</strong> millor tenir-ne dues unitats.</li>
             <li><strong>Marcatge:</strong> posa-hi el nom per evitar pèrdues.</li>
+      <li><strong>Ordinador i bibliografia tècnica</strong> (Segons indicacions a principi de curs)</li>  
           </ul>
         </div>
       </div>
+      <div class="col links">
+          <div class="preview-container">
+            <a class="cta" href="https://www.laborman.net:8043/shop/category/centres-educatius-jesuites-el-clot-manteniment-aeromecanic-1613" target="_blank" rel="noopener">Roba de taller — TMA</a>
+            <div class="preview-box">
+              <img src="img/Captura-botiga-tma.jpg" alt="Vista prèvia botiga TMA">
+              <p style="font-size: 0.8em; margin: 5px 0; text-align: center; color: #666; line-height: 1;">Fes clic per anar a la botiga</p>
+            </div>
+          </div>
+        </div>
     </section>
 
-    <section>
+  <section data-state="is-tma">
+      <h2>TMA — Empreses i activitats</h2>
+      <div class="col-container" style="margin-top: 20px;">
+        <div class="col">
+          <ul style="margin-bottom: 20px;">
+            <li>Col·laboració i pràctiques amb empreses del sector.</li>
+            <li>Visites tècniques a instal·lacions aeronàutiques</li>
+       <li>Opendays: 20 d'abril i 12 de maig ambdos a les 18h</li>
+          </ul>
+        </div>
+        <div class="col col-img">
+          <img src="img/5. heliswiss_rgb.png" alt="Heliswiss">
+      <img src="img/RGB_IberiaMantenimiento_RED.png" alt="Iberia">
+      <img src="img/TMA.jpeg" alt="Pràctiques AUTO">
+        </div>
+      </div>
+    </section>  
+    
+    <section id="contacte" data-state="contacte">
       <h2>Contacte</h2>
-      <div class="box-info" style="border-left: none; border-top: 5px solid var(--fje-red); text-align: center; border-radius: 8px;">
+      <div class="box-info" style="border-left: none; border-top: 5px solid var(--color-clot); text-align: center; border-radius: 8px;">
         <p><strong>Adreça:</strong> València 680, 08027 Barcelona</p>
         <p><strong>Telèfon:</strong> 93 351 60 11</p>
         <p><strong>Correu:</strong> info.clot@fje.edu</p>
-        <p><strong>Web:</strong> <a href="https://www.fje.edu/ca/jesuites-clot" target="_blank" style="color: var(--fje-red); text-decoration: none; font-weight: bold;">fje.edu/ca/jesuites-clot</a></p>
+        <p><strong>Web:</strong> <a href="https://www.fje.edu/ca/jesuites-clot" target="_blank" style="color: var(--color-clot); text-decoration: none; font-weight: bold;">fje.edu/ca/jesuites-clot</a></p>
+      </div>
+      
+      <div style="margin-top: 40px; text-align: center;">
+        <a class="cta" style="font-size: 0.8em;" href="#/">&#8617; Tornar a l'inici</a>
       </div>
     </section>
 
@@ -209,9 +435,9 @@
     slideNumber: true,
     transition: 'slide',
     center: false,
-    width: 1080,
+    width: 1280,
     height: 720,
-    margin: 0.08,
+    margin: 0.04,
     minScale: 0.2,
     maxScale: 2.0
   });

@@ -153,13 +153,44 @@ body.is-tma .logo-tma,
   pointer-events: auto !important;
 }
 
-/* 4. Amagar el logo de l'escola (dalt esquerra) NOMÉS a la portada */
+/* =========================================
+   BLINDAJE DE LA PORTADA
+========================================= */
+/* Amagar TOTES les marques d'aigua de les cantonades quan estem a la portada */
 body.portada .logo-global.top-left,
 .reveal-viewport.portada .logo-global.top-left,
-.reveal.portada .logo-global.top-left {
+.reveal.portada .logo-global.top-left,
+body.portada .logo-auto,
+.reveal-viewport.portada .logo-auto,
+.reveal.portada .logo-auto,
+body.portada .logo-tma,
+.reveal-viewport.portada .logo-tma,
+.reveal.portada .logo-tma {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* =========================================
+   ADAPTACIÓ PER A MÒBILS (SMARTPHONES)
+========================================= */
+@media (max-width: 768px) {
+  /* Reduïm marges i mides dels logos perquè no tapin el text ni surtin de la pantalla */
+  .logo-global.top-left {
+    top: 10px !important;
+    left: 10px !important;
+  }
+  .logo-global.top-left img {
+    width: 80px !important; /* Abans 150px */
+  }
+  
+  .logo-global.bottom-right {
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+  .logo-global.bottom-right img {
+    width: 70px !important; /* Abans 120px */
+  }
 }
 
 /* Opcional: Afegim una transició suau al logo de dalt perquè no aparegui de cop */

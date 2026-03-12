@@ -152,80 +152,55 @@
 }
 
 /* =========================================
-   LOGOS FLOTANTS (COMPATIBLE AMB REVEAL.JS)
+   LOGOS FLOTANTS (VERSIÓ ORIGINAL ESTABLE)
 ========================================= */
 .logo-global {
-  position: absolute !important; /* 'absolute' evita que Reveal.js es torni boig */
-  z-index: 999999 !important; 
-  pointer-events: none; 
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
 }
 
-/* Logo Escola (Forçat a dalt a l'esquerra) */
+/* Logo Escola a dalt a l'esquerra */
 .logo-global.top-left {
-  top: 30px !important;
-  left: 30px !important;
-  bottom: auto !important;
-  right: auto !important;
+  top: 20px;
+  left: 20px;
 }
 .logo-global.top-left img {
-  width: 130px !important; 
+  width: 150px;
 }
 
-/* Logos Especialitats (Forçat a baix a la dreta) */
+/* Logos Especialitats a baix a la dreta */
 .logo-global.bottom-right {
-  bottom: 30px !important;
-  right: 30px !important;
-  top: auto !important;
-  left: auto !important;
+  bottom: 20px;
+  right: 20px;
 }
 .logo-global.bottom-right img {
-  width: 100px !important; 
+  width: 120px;
 }
 
 /* 1. Amagar per defecte els logos de les especialitats */
 .logo-auto, .logo-tma {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  display: none !important; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
 
-/* 2. Mostrar logos d'especialitat NOMÉS quan estem a la seva secció */
+/* 2. Mostrar els logos NOMÉS quan estem a la seva secció */
+body.is-auto .logo-auto,
 .reveal.is-auto .logo-auto {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  opacity: 1;
+  visibility: visible;
 }
 
+body.is-tma .logo-tma,
 .reveal.is-tma .logo-tma {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+  opacity: 1;
+  visibility: visible;
 }
 
-/* 3. BLINDATGE PORTADA: Eliminar TOTS els logos a la portada */
+/* 3. Amagar els logos a la portada */
+body.portada .logo-global,
 .reveal.portada .logo-global {
   opacity: 0 !important;
   visibility: hidden !important;
-  display: none !important;
-}
-
-/* =========================================
-   ADAPTACIÓ MIDA PER A MÒBILS (SMARTPHONES)
-========================================= */
-@media (max-width: 768px) {
-  .logo-global.top-left {
-    top: 15px !important;
-    left: 15px !important;
-  }
-  .logo-global.top-left img {
-    width: 80px !important; 
-  }
-  
-  .logo-global.bottom-right {
-    bottom: 15px !important;
-    right: 15px !important;
-  }
-  .logo-global.bottom-right img {
-    width: 70px !important; 
-  }
 }

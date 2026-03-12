@@ -106,99 +106,6 @@
 }
 
 /* =========================================
-   LOGOS FLOTANTS (Màgia d'aparició)
-========================================= */
-.logo-global {
-  position: absolute; 
-  z-index: 9999; /* Ho pugem al màxim perquè absolutament res ho tapi */
-}
-.logo-global.top-left {
-  top: 30px;
-  left: 30px;
-}
-.logo-global.top-left img {
-  width: 200px; 
-}
-.logo-global.bottom-right {
-  bottom: 30px;
-  right: 30px;
-}
-.logo-global.bottom-right img {
-  width: 200px; 
-}
-
-/* 1. Amaguem els logos dels cicles per defecte */
-.logo-auto, .logo-tma {
-  opacity: 0 !important;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out;
-  pointer-events: none;
-}
-
-/* 2. Mostrar logo AUTO (cobrint totes les versions possibles de Reveal.js) */
-body.is-auto .logo-auto,
-.reveal-viewport.is-auto .logo-auto,
-.reveal.is-auto .logo-auto {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
-
-/* 3. Mostrar logo TMA (cobrint totes les versions possibles de Reveal.js) */
-body.is-tma .logo-tma,
-.reveal-viewport.is-tma .logo-tma,
-.reveal.is-tma .logo-tma {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
-
-/* =========================================
-   BLINDAJE DE LA PORTADA
-========================================= */
-/* Amagar TOTES les marques d'aigua de les cantonades quan estem a la portada */
-body.portada .logo-global.top-left,
-.reveal-viewport.portada .logo-global.top-left,
-.reveal.portada .logo-global.top-left,
-body.portada .logo-auto,
-.reveal-viewport.portada .logo-auto,
-.reveal.portada .logo-auto,
-body.portada .logo-tma,
-.reveal-viewport.portada .logo-tma,
-.reveal.portada .logo-tma {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* =========================================
-   ADAPTACIÓ PER A MÒBILS (SMARTPHONES)
-========================================= */
-@media (max-width: 768px) {
-  /* Reduïm marges i mides dels logos perquè no tapin el text ni surtin de la pantalla */
-  .logo-global.top-left {
-    top: 10px !important;
-    left: 10px !important;
-  }
-  .logo-global.top-left img {
-    width: 80px !important; /* Abans 150px */
-  }
-  
-  .logo-global.bottom-right {
-    bottom: 15px !important;
-    right: 15px !important;
-  }
-  .logo-global.bottom-right img {
-    width: 70px !important; /* Abans 120px */
-  }
-}
-
-/* Opcional: Afegim una transició suau al logo de dalt perquè no aparegui de cop */
-.logo-global.top-left {
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* =========================================
    CAIXA FLOTANT DE PREVISUALITZACIÓ (BOTIGA)
 ========================================= */
 .preview-container {
@@ -242,4 +149,75 @@ body.portada .logo-tma,
   width: 100%;
   border-radius: 4px;
   display: block;
+}
+
+/* =========================================
+   LOGOS FLOTANTS (TOTA LA LÒGICA DEFINITIVA)
+========================================= */
+.logo-global {
+  position: fixed !important; /* Clavat a la pantalla perquè no s'amagui al mòbil */
+  z-index: 999999 !important; 
+  pointer-events: none; /* Que no molestin si l'usuari fa clic a sobre */
+}
+
+.logo-global.top-left {
+  top: 20px;
+  left: 20px;
+  transition: opacity 0.4s ease;
+}
+.logo-global.top-left img {
+  width: 130px; 
+}
+
+.logo-global.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+.logo-global.bottom-right img {
+  width: 100px; 
+}
+
+/* 1. Amagar per defecte els logos de cicle */
+.logo-auto, .logo-tma {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* 2. Mostrar logos quan toca (Molt més simplificat) */
+.is-auto .logo-auto {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.is-tma .logo-tma {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 3. BLINDATGE PORTADA: Amagar TOTS els logos de les cantonades a la portada */
+.portada .logo-global {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* =========================================
+   ADAPTACIÓ MIDA PER A MÒBILS (SMARTPHONES)
+========================================= */
+@media (max-width: 768px) {
+  .logo-global.top-left {
+    top: 10px;
+    left: 10px;
+  }
+  .logo-global.top-left img {
+    width: 65px !important; /* Molt més petits al mòbil */
+  }
+  
+  .logo-global.bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  .logo-global.bottom-right img {
+    width: 55px !important; /* Molt més petits al mòbil */
+  }
 }

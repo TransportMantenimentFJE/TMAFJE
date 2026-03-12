@@ -151,19 +151,18 @@
   display: block;
 }
 
-/* =========================================
-   LOGOS FLOTANTS (TOTA LA LÒGICA DEFINITIVA)
+//* =========================================
+   LOGOS FLOTANTS (ESTRUCTURA INDESTRUCTIBLE)
 ========================================= */
 .logo-global {
-  position: fixed !important; /* Clavat a la pantalla perquè no s'amagui al mòbil */
+  position: fixed !important; 
   z-index: 999999 !important; 
-  pointer-events: none; /* Que no molestin si l'usuari fa clic a sobre */
+  pointer-events: none; 
 }
 
 .logo-global.top-left {
   top: 20px;
   left: 20px;
-  transition: opacity 0.4s ease;
 }
 .logo-global.top-left img {
   width: 130px; 
@@ -177,28 +176,34 @@
   width: 100px; 
 }
 
-/* 1. Amagar per defecte els logos de cicle */
+/* 1. Amagar per defecte els logos de les especialitats (eliminats literalment) */
 .logo-auto, .logo-tma {
   opacity: 0 !important;
   visibility: hidden !important;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: none !important; 
 }
 
-/* 2. Mostrar logos quan toca (Molt més simplificat) */
-.is-auto .logo-auto {
+/* 2. Mostrar logos d'especialitat NOMÉS quan estem a la seva secció */
+body.is-auto .logo-auto,
+.reveal.is-auto .logo-auto {
   opacity: 1 !important;
   visibility: visible !important;
+  display: block !important;
 }
 
-.is-tma .logo-tma {
+body.is-tma .logo-tma,
+.reveal.is-tma .logo-tma {
   opacity: 1 !important;
   visibility: visible !important;
+  display: block !important;
 }
 
-/* 3. BLINDATGE PORTADA: Amagar TOTS els logos de les cantonades a la portada */
-.portada .logo-global {
+/* 3. BLINDATGE PORTADA: Eliminar absolutament TOTS els logos petits a la portada */
+body.portada .logo-global,
+.reveal.portada .logo-global {
   opacity: 0 !important;
   visibility: hidden !important;
+  display: none !important;
 }
 
 /* =========================================
@@ -206,18 +211,18 @@
 ========================================= */
 @media (max-width: 768px) {
   .logo-global.top-left {
-    top: 10px;
-    left: 10px;
+    top: 10px !important;
+    left: 10px !important;
   }
   .logo-global.top-left img {
-    width: 65px !important; /* Molt més petits al mòbil */
+    width: 70px !important; /* Molt més petit perquè hi càpiga bé */
   }
   
   .logo-global.bottom-right {
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px !important;
+    right: 15px !important;
   }
   .logo-global.bottom-right img {
-    width: 55px !important; /* Molt més petits al mòbil */
+    width: 60px !important; /* Molt més petit perquè hi càpiga bé */
   }
 }

@@ -204,3 +204,17 @@ body.portada .logo-global,
   opacity: 0 !important;
   visibility: hidden !important;
 }
+
+/* 4. Amagar el logo de l'escola (dalt esquerra) NOMÉS a la portada */
+body.portada .logo-global.top-left,
+.reveal-viewport.portada .logo-global.top-left,
+.reveal.portada .logo-global.top-left {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Opcional: Afegim una transició suau al logo de dalt perquè no aparegui de cop */
+.logo-global.top-left {
+  transition: opacity 0.5s ease-in-out;
+}

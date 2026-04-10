@@ -218,3 +218,7 @@ body.portada .logo-global.top-left,
 .logo-global.top-left {
   transition: opacity 0.5s ease-in-out;
 }
+
+html, body {
+  touch-action: manipulation; /* Evita que la pantalla tàctil faci zoom o dobles clics estranys */
+}
